@@ -4,10 +4,10 @@ from main_window import *
 from misc import redirect_window, clickable, change_image, change_info, inc_search
 from movie_operations import *
 from PyQt4.QtGui import *
-#Criação da aplicação
+
 app = QtGui.QApplication(sys.argv)
 
-#Criação das telas
+
 login_wn = LoginWindow()
 login_wn.center_on_screen()
 signup_wn = SignupWindow()
@@ -17,7 +17,7 @@ main_wn.center_on_screen()
 login_wn.show()
 login_wn.lineEdit.text()
 login_wn.lineEdit_2.text()
-#Fluxo de navegação
+
 login_wn.pushButton_2.clicked.connect(lambda: redirect_window(login_wn, "SignupWindow"))
 signup_wn.pushButton.clicked.connect(signup_wn.click_signup)
 login_wn.pushButton.clicked.connect(login_wn.click_login)
